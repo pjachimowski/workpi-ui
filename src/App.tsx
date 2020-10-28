@@ -44,7 +44,7 @@ const App: React.FC<{}> = props => {
                 <Route path="/login"><LoginView></LoginView></Route>
                 <Route path="/register"><RegisterView></RegisterView></Route>
                 <Route>
-                  <div>404 not found</div>
+                  <div>404 not found...</div>
                 </Route>
               </Switch>
             </BrowserRouter>
