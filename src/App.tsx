@@ -19,6 +19,8 @@ import { DialogTargetContainer } from './components/Dialog';
 import { AppNavBar } from './components/Navigation/AppNavBar';
 import { GoogleAuth } from './components/Auth/GoogleAuth';
 
+import ProfileSidePane from '../src/components/Profile/ProfileSidePane/ProfileSidePane'
+
 library.add(fas, fab as any);
 
 const App: React.FC<{}> = props => {
@@ -45,6 +47,7 @@ const App: React.FC<{}> = props => {
                 <Route path="/register"><RegisterView></RegisterView></Route>
                 <Route>
                   <div>404 not found...</div>
+                  <ProfileSidePane />
                 </Route>
               </Switch>
             </BrowserRouter>
