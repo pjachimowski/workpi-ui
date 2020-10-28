@@ -1,1 +1,8 @@
-@import '~theme/workpi.scss';
+@import "~theme/workpi.scss";
+
+.profile-side-pane {
+padding: 100px 15px;
+  background-color: #fff;
+  position: fixed;
+  width: 25%;
+}

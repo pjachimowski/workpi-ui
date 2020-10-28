@@ -1,18 +1,20 @@
-import React from 'react';
-import DevelopmentSkills from '../DevelopmentSkills/DevelopmentSkills';
-import PersonalInfo from '../PersonalInfo/PersonalInfo';
-import TopSkills from '../TopSkills/TopSkills';
+import React from "react";
+import "./ProfileSidePane.scss";
+import DevelopmentSkills from "../DevelopmentSkills/DevelopmentSkills";
+import PersonalInfo from "../PersonalInfo/PersonalInfo";
+import TopSkills from "../TopSkills/TopSkills";
+import { Spacer } from "../../Layout/Spacer/Spacer";
 
 const ProfileSidePane = () => {
-    return (
-      <div>
-        <h1>Profile Side Pane</h1>
-        <PersonalInfo />
-        <TopSkills />
-        <DevelopmentSkills />
-      </div>
-    );
-  };
-  
+  return (
+    <div className="profile-side-pane">
+      <PersonalInfo />
+      <Spacer />
+      <TopSkills />
+      <Spacer />
+      <DevelopmentSkills />
+    </div>
+  );
+};
 
 export default ProfileSidePane;

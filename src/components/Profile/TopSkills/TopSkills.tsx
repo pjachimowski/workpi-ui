@@ -1,10 +1,12 @@
 import React from 'react';
+import './TopSkills.scss';
+import topmockup from './top-mockup.jpg';
 
 const TopSkills = () => {
     return (
       <div>
-        <h1>Top Skills</h1>
-        <div>content</div>
+        <div className="top-skills-title">Top skills</div>
+        <img src={topmockup} alt="development skills"></img>
       </div>
     );
   };
