@@ -24,7 +24,6 @@ const PersonalInfo = () => {
   const [additionalFields, setAdditionalFields] = useState<string[]>([]);
 
   const addField = () => {
-    console.log(">>>>", window.localStorage.getItem("token"));
     setAdditionalFields([...additionalFields, "foo"]);
   };
 
@@ -68,6 +67,7 @@ const PersonalInfo = () => {
         Add field
       </button>
       <div>  {additionalFields} </div>
+  
     </div>
   );
 };

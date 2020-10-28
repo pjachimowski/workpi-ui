@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import './DevelopmentSkills.scss';
 
+// change it to Prop
+interface Skills {
+  skills: string[];
+}
+
 const DevelopmentSkills = () => {
+  const [skills, setSkills] = useState<Skills>({
+    skills: ["English writing", "Concetration", "Presenting"]
+  });
+
   return (
     <div>
       <div className="development-skills-title">Development Skills</div>
-      <ul>
-        <li>English writing</li>
-        <li>Concetration</li>
-        <li>Presenting</li>
-      </ul>
+      { skills.skills.map( i => <div>{i}</div>)}
     </div>
   );
 };
