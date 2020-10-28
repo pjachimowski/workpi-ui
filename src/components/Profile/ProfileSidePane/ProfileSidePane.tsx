@@ -6,15 +6,21 @@ import TopSkills from "../TopSkills/TopSkills";
 import { Spacer } from "../../Layout/Spacer/Spacer";
 
 const ProfileSidePane = () => {
-
-  
   return (
     <div className="profile-side-pane">
-      <PersonalInfo />
+      <PersonalInfo
+        name="Patryk Jachimowski"
+        currentJob="Creative Director"
+        futureRelevance="very probably disappearing"
+        department="Marketing"
+        departmentLocation="Amsterdam"
+      />
       <Spacer />
-      <TopSkills />
+      <TopSkills topSkills={["Adapdability", "Coaching", "Creativity"]} />
       <Spacer />
-      <DevelopmentSkills />
+      <DevelopmentSkills
+        skills={["English writing", "Concetration", "Presenting"]}
+      />
     </div>
   );
 };

@@ -3,8 +3,7 @@ import "./PersonalInfo.scss";
 import profile from "./profile.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-// change it to Prop
-interface User {
+interface Props {
   name: string;
   currentJob: string;
   futureRelevance: string;
@@ -12,8 +11,9 @@ interface User {
   departmentLocation: string;
 }
 
-const PersonalInfo = () => {
-  const [user, setUser] = useState<User>({
+const PersonalInfo: React.FC<Props> = () => {
+  //useState for now overlaps with props
+  const [user, setUser] = useState({
     name: "Patryk Jachimowski",
     currentJob: "Creative Director",
     futureRelevance: "very probably disappearing",
@@ -66,8 +66,7 @@ const PersonalInfo = () => {
         ></FontAwesomeIcon>
         Add field
       </button>
-      <div>  {additionalFields} </div>
-  
+      <div> {additionalFields} </div>
     </div>
   );
 };
