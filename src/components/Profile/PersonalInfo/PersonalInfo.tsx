@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./PersonalInfo.scss";
 import profile from "./profile.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useUserCtx } from "../../../hooks/UserHook";
 
+// change it to Prop
 interface User {
   name: string;
   currentJob: string;
@@ -13,63 +13,61 @@ interface User {
 }
 
 const PersonalInfo = () => {
-  const [user, setUser]: [User, (user: User) => void] = useState({
-    name: "",
-    currentJob: "",
-    futureRelevance: "",
-    department: "",
-    departmentLocation: "",
+  const [user, setUser] = useState<User>({
+    name: "Patryk Jachimowski",
+    currentJob: "Creative Director",
+    futureRelevance: "very probably disappearing",
+    department: "Marketing",
+    departmentLocation: "Amsterdam",
   });
 
-  useEffect(() => {
-    setUser({
-      name: "Patryk Jachimowski",
-      currentJob: "Creative Director",
-      futureRelevance: "very probably disappearing",
-      department: "Marketing",
-      departmentLocation: "Amsterdam",
-    });
-  });
+  const [additionalFields, setAdditionalFields] = useState<string[]>([]);
+
+  const addField = () => {
+    console.log(">>>>", window.localStorage.getItem("token"));
+    setAdditionalFields([...additionalFields, "foo"]);
+  };
 
   return (
     <div className="personal-info">
       <img src={profile} alt="profile picture"></img>
-      <div className="name">Patryk Jachimowski</div>
+      <div className="name">{user.name}</div>
       <div className="current-job">
         <FontAwesomeIcon
           className="icon"
           icon={["fas", "briefcase"]}
         ></FontAwesomeIcon>
-        Creative Director
+        {user.currentJob}
       </div>
       <div className="future-relevance">
         <FontAwesomeIcon
           className="icon"
           icon={["fas", "forward"]}
-        ></FontAwesomeIcon>{" "}
-        very probably disappearing
+        ></FontAwesomeIcon>
+        {user.futureRelevance}
       </div>
       <div className="department">
         <FontAwesomeIcon
           className="icon"
           icon={["fas", "building"]}
-        ></FontAwesomeIcon>{" "}
-        Marketing
+        ></FontAwesomeIcon>
+        {user.department}
       </div>
       <div className="department-location">
         <FontAwesomeIcon
           className="icon"
           icon={["fas", "map-marker-alt"]}
-        ></FontAwesomeIcon>{" "}
-        Amsterdam
+        ></FontAwesomeIcon>
+        {user.departmentLocation}
       </div>
-      <a href="#">
+      <button onClick={addField}>
         <FontAwesomeIcon
           className="icon"
           icon={["fas", "plus-square"]}
         ></FontAwesomeIcon>
         Add field
-      </a>
+      </button>
+      <div>  {additionalFields} </div>
     </div>
   );
 };

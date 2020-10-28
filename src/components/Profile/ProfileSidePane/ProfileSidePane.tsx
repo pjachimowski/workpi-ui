@@ -6,6 +6,8 @@ import TopSkills from "../TopSkills/TopSkills";
 import { Spacer } from "../../Layout/Spacer/Spacer";
 
 const ProfileSidePane = () => {
+
+  
   return (
     <div className="profile-side-pane">
       <PersonalInfo />
