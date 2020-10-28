@@ -1,1 +1,48 @@
-@import '~theme/workpi.scss';
+@import "~theme/workpi.scss";
+
+.personal-info {
+  text-align: center;
+
+  img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: .4em;
+  }
+
+
+  .icon {
+      padding-right: .4em;
+  }
+
+  .name {
+    font-weight: bold;
+  }
+
+  .current-job {
+    color: $color-primary-2;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .future-relevance .icon {
+    color: $color-grey-2;
+  }
+
+  .department .icon {
+    color: $color-grey-2;
+  }
+
+  .department-location .icon {
+    color: rgb(202, 102, 181);
+  }
+
+  a {
+    color: $color-dark-grey-2;
+    text-decoration: none;
+    .icon {
+      color: $color-primary-2;
+    }
+  }
+}
