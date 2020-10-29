@@ -3,9 +3,9 @@ import { ProgressBar } from "../../Display/ProgressBar";
 import "./DevelopmentSkills.scss";
 
 interface Skill {
-  indicatorName: string,
-  indicatorValue: number,
-  indicatorCategory: string, 
+  indicatorName: string;
+  indicatorValue: number;
+  indicatorCategory: string;
 }
 
 interface Props {
@@ -13,22 +13,16 @@ interface Props {
 }
 
 const DevelopmentSkills: React.FC<Props> = () => {
-  //useState for now overlaps with props
-  // const [skills, setSkills] = useState<Skill>({
-  // });
-
   return (
     <div className="development-skills">
-    {/*Progress Bars modyfied in ../../Display/ProgressBar*/}
+      {/*Progress Bars modyfied in ../../Display/ProgressBar*/}
       <div className="development-skills-title">Development Skills</div>
-      {skills.skills.map((i) => (
-        <div >
+      {/* {skills.skills.map((i) => (
+        <div>
           {i}
           <ProgressBar value={55} />
-          </div>
-      ))}
-       
-      
+        </div>
+      ))} */}
     </div>
   );
 };

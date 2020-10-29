@@ -6,9 +6,13 @@ import TopSkills from "../TopSkills/TopSkills";
 import PaneItem from "../PaneItem/PaneItem";
 
 const ProfileSidePane = () => {
-  const [developmentSkills, setDevelopmentSkills] = useState();
+  const [developmentSkills, setDevelopmentSkills] = useState({
+    indicators: [],
+  });
 
-  const [topSkills, setTopSkills] = useState();
+  const [topSkills, setTopSkills] = useState({
+    indicators: [],
+  });
 
   const [personalInfo, setPersonalInfo] = useState();
 

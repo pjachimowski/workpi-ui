@@ -1,37 +1,44 @@
 {
-  "data": {
-    "title": "indicator example data",
-    "indicators": [
-      {
-        "indicatorName": "Adapdability",
-        "indicatorValue": 12,
-        "indicatorCategory": "skill"
-      },
-      {
-        "indicatorName": "Coaching",
-        "indicatorValue": 11,
-        "indicatorCategory": "skill"
-      },
-      {
-        "indicatorName": "Creativity",
-        "indicatorValue": 10,
-        "indicatorCategory": "skill"
-      },
-      {
-        "indicatorName": "Time management",
-        "indicatorValue": 8,
-        "indicatorCategory": "skill"
-      },
-      {
-        "indicatorName": "UX UI",
-        "indicatorValue": 18,
-        "indicatorCategory": "Preference"
-      },
-      {
-        "indicatorName": "Passionate",
-        "indicatorValue": 2,
-        "indicatorCategory": "Characteristic"
-      }
-    ]
-  }
+  "indicators": [
+    {
+      "indicatorName": "Adapdability",
+      "indicatorValue": 12,
+      "indicatorCategory": "skill"
+    },
+    {
+      "indicatorName": "Coaching",
+      "indicatorValue": 11,
+      "indicatorCategory": "skill"
+    },
+    {
+      "indicatorName": "Creativity",
+      "indicatorValue": 10,
+      "indicatorCategory": "skill"
+    },
+    {
+      "indicatorName": "Concetration",
+      "indicatorValue": 8,
+      "indicatorCategory": "skill"
+    },
+    {
+      "indicatorName": "English Writing",
+      "indicatorValue": 4,
+      "indicatorCategory": "skill"
+    },
+    {
+      "indicatorName": "Presenting",
+      "indicatorValue": 5,
+      "indicatorCategory": "skill"
+    },
+    {
+      "indicatorName": "UX UI",
+      "indicatorValue": 18,
+      "indicatorCategory": "Preference"
+    },
+    {
+      "indicatorName": "Passionate",
+      "indicatorValue": 2,
+      "indicatorCategory": "Characteristic"
+    }
+  ]
 }
