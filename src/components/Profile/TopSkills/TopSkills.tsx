@@ -10,7 +10,7 @@ const TopSkills: React.FC<Props> = () => {
   //useState for now overlaps with props
   const [topSkills, setTopSkills] = useState({
     chartData: {
-      labels: ["Adaptability",  "Coaching",  "Creativity"],
+      labels: ["Adaptability", "Coaching", "Creativity"],
       datasets: [
         {
           data: [10, 11, 12],

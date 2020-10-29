@@ -1,10 +1,11 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import "./PaneItem.scss";
 
 
-const PaneItem = () => {
+const PaneItem: React.FC = (props) => {
   return (
-    <div className="pane-item">pane item
+    <div className="pane-item">
+      {props.children}
     </div>
   );
 };
