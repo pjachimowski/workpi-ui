@@ -4,17 +4,17 @@ import { Radar } from "react-chartjs-2";
 import { Indicator } from "../ProfileSidePane/types";
 
 interface Props {
-  topSkills: string[];
+  topSkills: Indicator[];
 }
 
-const TopSkills: React.FC<Props> = () => {
+const TopSkills: React.FC<Props> = (props) => {
 
   const chartData = {
     // change labels to props 
-    labels: ["Adaptability", "Coaching", "Creativity"],
+    labels: props.topSkills.map(x => x.indicatorName),
     datasets: [
       {
-        data: [10, 11, 12],
+        data: props.topSkills.map(x => x.indicatorValue),
         backgroundColor: "rgba(253, 221, 77, 0.5)",
         borderColor: "rgba(253, 221, 77, 1)",
         borderWidth: 2,
