@@ -3,32 +3,32 @@
     {
       "indicatorName": "Adapdability",
       "indicatorValue": 12,
-      "indicatorCategory": "skill"
+      "indicatorCategory": "Skill"
     },
     {
       "indicatorName": "Coaching",
       "indicatorValue": 11,
-      "indicatorCategory": "skill"
+      "indicatorCategory": "Skill"
     },
     {
       "indicatorName": "Creativity",
       "indicatorValue": 10,
-      "indicatorCategory": "skill"
+      "indicatorCategory": "Skill"
     },
     {
       "indicatorName": "Concetration",
       "indicatorValue": 8,
-      "indicatorCategory": "skill"
+      "indicatorCategory": "Skill"
     },
     {
       "indicatorName": "English Writing",
       "indicatorValue": 4,
-      "indicatorCategory": "skill"
+      "indicatorCategory": "Skill"
     },
     {
       "indicatorName": "Presenting",
       "indicatorValue": 5,
-      "indicatorCategory": "skill"
+      "indicatorCategory": "Skill"
     },
     {
       "indicatorName": "UX UI",

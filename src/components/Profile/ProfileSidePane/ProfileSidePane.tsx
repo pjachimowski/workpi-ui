@@ -4,10 +4,23 @@ import DevelopmentSkills from "../DevelopmentSkills/DevelopmentSkills";
 import PersonalInfo from "../PersonalInfo/PersonalInfo";
 import TopSkills from "../TopSkills/TopSkills";
 import PaneItem from "../PaneItem/PaneItem";
+import * as data from "./data.json";
+
+interface Indicators {
+  indicatorName: string,
+  indicatorValue: number,
+  indicatorCategory: "Skill" | "Preference" | "Characteristic",
+}
+
+
 
 const ProfileSidePane = () => {
   const [developmentSkills, setDevelopmentSkills] = useState({
     indicators: [],
+  });
+
+  useEffect(() => {
+    setDevelopmentSkills(data.indicators.filter( x => x.indicatorCategory === "skill"))
   });
 
   const [topSkills, setTopSkills] = useState({
