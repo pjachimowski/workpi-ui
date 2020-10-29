@@ -1,9 +1,15 @@
-@import '~theme/workpi.scss';
+@import "~theme/workpi.scss";
 
 .development-skills-title {
-    font-weight: bold;
+  margin-top: 15px;
+  font-weight: bold;
+}
+.development-skills {
+  text-align: left;
+  width: 50%;
+  margin-left: 25%;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
