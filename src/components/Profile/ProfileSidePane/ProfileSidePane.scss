@@ -5,6 +5,9 @@ $break-large: 1024px;
 
 .profile-side-pane {
   background-color: #fff;
+  font-size: 10px;
+  line-height: 1.6;
+  text-align: center;
   position: fixed;
   width: 50%;
   /*padding-top 64(hight on the navbar) + 5 */

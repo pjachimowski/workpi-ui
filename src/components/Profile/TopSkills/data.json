@@ -1,0 +1,37 @@
+{
+  "data": {
+    "title": "indicator example data",
+    "indicators": [
+      {
+        "indicatorName": "Adapdability",
+        "indicatorValue": 12,
+        "indicatorCategor": "skill"
+      },
+      {
+        "indicatorName": "Coaching",
+        "indicatorValue": 11,
+        "indicatorCategor": "skill"
+      },
+      {
+        "indicatorName": "Creativity",
+        "indicatorValue": 10,
+        "indicatorCategor": "skill"
+      },
+      {
+        "indicatorName": "Time management",
+        "indicatorValue": 8,
+        "indicatorCategor": "skill"
+      },
+      {
+        "indicatorName": "UX UI",
+        "indicatorValue": 18,
+        "indicatorCategor": "Preference"
+      },
+      {
+        "indicatorName": "Passionate",
+        "indicatorValue": 2,
+        "indicatorCategor": "Characteristic"
+      }
+    ]
+  }
+}
