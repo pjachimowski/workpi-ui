@@ -13,7 +13,7 @@ interface Props {
 
 const PersonalInfo: React.FC<Props> = () => {
   //useState for now overlaps with props
-  const [user, setUser] = useState({
+  const [user, setUser] = useState<Props>({
     name: "Patryk Jachimowski",
     currentJob: "Creative Director",
     futureRelevance: "very probably disappearing",

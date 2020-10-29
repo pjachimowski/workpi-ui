@@ -7,7 +7,7 @@ interface Props {
 
 const DevelopmentSkills: React.FC<Props> = () => {
   //useState for now overlaps with props
-  const [skills, setSkills] = useState({
+  const [skills, setSkills] = useState<Props>({
     skills: ["English writing", "Concetration", "Presenting"],
   });
 
