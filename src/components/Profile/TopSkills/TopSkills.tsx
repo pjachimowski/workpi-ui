@@ -10,7 +10,7 @@ const TopSkills: React.FC<Props> = () => {
   //useState for now overlaps with props
   const [topSkills, setTopSkills] = useState({
     chartData: {
-      labels: ["Adaptability", "Coaching", "Creativity", "uuu", "pooo", "zoo"],
+      labels: ["Adaptability", "Coaching", "Creativity"],
       datasets: [
         {
           data: [10, 11, 12],
@@ -24,14 +24,6 @@ const TopSkills: React.FC<Props> = () => {
           pointBorderColor: "rgba(253, 221, 77, 0)",
         },
       ],
-      options: {
-        legend: {
-          display: false,
-        },
-        tooltips: {
-          enabled: false,
-        },
-      },
     },
   });
 
@@ -43,7 +35,23 @@ const TopSkills: React.FC<Props> = () => {
           data={topSkills.chartData}
           width={200}
           height={200}
-          options={{ maintainAspectRatio: false }}
+          options={{
+            scale: {
+              gridLines: { circular: true },
+              // angleLines: {
+              //   display: false,
+              // },
+              ticks: {
+                display: false,
+                suggestedMin: 0,
+                suggestedMax: 15,
+              },
+            },
+            maintainAspectRatio: false,
+            legend: {
+              display: false,
+            },
+          }}
         />
       </div>
     </div>
