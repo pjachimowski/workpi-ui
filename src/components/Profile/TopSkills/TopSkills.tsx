@@ -45,8 +45,8 @@ const TopSkills: React.FC<Props> = (props) => {
               ticks: {
                 display: false,
                 suggestedMin: 0,
-                suggestedMax: 15,
-                maxTicksLimit: 5,
+                suggestedMax: 100,
+                maxTicksLimit: 6,
               },
             },
             maintainAspectRatio: false,

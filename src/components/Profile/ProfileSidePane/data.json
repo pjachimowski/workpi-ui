@@ -2,42 +2,42 @@
   "indicators": [
     {
       "indicatorName": "Adapdability",
-      "indicatorValue": 13,
+      "indicatorValue": 95,
       "indicatorCategory": "Skill"
     },
     {
       "indicatorName": "Coaching",
-      "indicatorValue": 11,
+      "indicatorValue": 85,
       "indicatorCategory": "Skill"
     },
     {
       "indicatorName": "Creativity",
-      "indicatorValue": 10,
+      "indicatorValue": 70,
       "indicatorCategory": "Skill"
     },
     {
       "indicatorName": "Concetration",
-      "indicatorValue": 8,
+      "indicatorValue": 30,
       "indicatorCategory": "Skill"
     },
     {
       "indicatorName": "English Writing",
-      "indicatorValue": 4,
+      "indicatorValue": 55,
       "indicatorCategory": "Skill"
     },
     {
       "indicatorName": "Presenting",
-      "indicatorValue": 5,
+      "indicatorValue": 60,
       "indicatorCategory": "Skill"
     },
     {
       "indicatorName": "UX UI",
-      "indicatorValue": 18,
+      "indicatorValue": 95,
       "indicatorCategory": "Preference"
     },
     {
       "indicatorName": "Passionate",
-      "indicatorValue": 2,
+      "indicatorValue": 70,
       "indicatorCategory": "Characteristic"
     }
   ]

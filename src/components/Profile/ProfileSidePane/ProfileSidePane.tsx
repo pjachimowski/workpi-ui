@@ -10,15 +10,17 @@ import { Indicator } from "./types";
 
 const ProfileSidePane = () => {
   const [developmentSkills, setDevelopmentSkills] = useState<Indicator[]>([]);
-
   useEffect(() => {
     setDevelopmentSkills(
-      data.indicators.filter((x) => x.indicatorCategory === "Skill")
+      _.chain(data.indicators)
+        .orderBy("indicatorValue", "asc")
+        .filter((x) => x.indicatorCategory === "Skill")
+        .take(3)
+        .value()
     );
   });
 
   const [topSkills, setTopSkills] = useState<Indicator[]>([]);
-
   useEffect(() => {
     setTopSkills(
       _.chain(data.indicators)
@@ -55,9 +57,7 @@ const ProfileSidePane = () => {
       </PaneItem>
 
       <PaneItem>
-        <DevelopmentSkills
-          skills={["English writing", "Concetration", "Presenting"]}
-        />
+        <DevelopmentSkills developmentSkills={developmentSkills} />
       </PaneItem>
     </div>
   );
