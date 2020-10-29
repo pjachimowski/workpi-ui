@@ -5,28 +5,31 @@ import PersonalInfo from "../PersonalInfo/PersonalInfo";
 import TopSkills from "../TopSkills/TopSkills";
 import PaneItem from "../PaneItem/PaneItem";
 import * as data from "./data.json";
-
-interface Indicators {
-  indicatorName: string,
-  indicatorValue: number,
-  indicatorCategory: "Skill" | "Preference" | "Characteristic",
-}
-
-
+import * as _ from "lodash";
+import { Indicator } from "./types";
 
 const ProfileSidePane = () => {
-  const [developmentSkills, setDevelopmentSkills] = useState({
-    indicators: [],
-  });
+  const [developmentSkills, setDevelopmentSkills] = useState<Indicator[]>([]);
 
   useEffect(() => {
-    setDevelopmentSkills(data.indicators.filter( x => x.indicatorCategory === "skill"))
+    setDevelopmentSkills(
+      data.indicators.filter((x) => x.indicatorCategory === "Skill")
+    );
   });
 
-  const [topSkills, setTopSkills] = useState({
-    indicators: [],
+  const [topSkills, setTopSkills] = useState<Indicator[]>([]);
+
+  useEffect(() => {
+    setTopSkills(
+      _.chain(data.indicators)
+        .orderBy("indicatorValue", "desc")
+        .filter((x) => x.indicatorCategory === "Skill")
+        .take(3)
+        .value()
+    );
   });
 
+  // add data to mocked JSON
   const [personalInfo, setPersonalInfo] = useState();
 
   const getDevelopmentSkillsMock = () => {};
@@ -48,7 +51,7 @@ const ProfileSidePane = () => {
         />
       </PaneItem>
       <PaneItem>
-        <TopSkills topSkills={["Adaptability", "Coaching", "Creativity"]} />
+        <TopSkills topSkills={topSkills} />
       </PaneItem>
 
       <PaneItem>
