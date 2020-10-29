@@ -2,6 +2,12 @@ import React, { useState, useEffect } from "react";
 import { ProgressBar } from "../../Display/ProgressBar";
 import "./DevelopmentSkills.scss";
 
+interface Skill {
+  indicatorName: string,
+  indicatorValue: number,
+  indicatorCategory: string, 
+}
+
 interface Props {
   skills: string[];
 }

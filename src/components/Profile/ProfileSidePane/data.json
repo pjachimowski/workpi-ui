@@ -5,32 +5,32 @@
       {
         "indicatorName": "Adapdability",
         "indicatorValue": 12,
-        "indicatorCategor": "skill"
+        "indicatorCategory": "skill"
       },
       {
         "indicatorName": "Coaching",
         "indicatorValue": 11,
-        "indicatorCategor": "skill"
+        "indicatorCategory": "skill"
       },
       {
         "indicatorName": "Creativity",
         "indicatorValue": 10,
-        "indicatorCategor": "skill"
+        "indicatorCategory": "skill"
       },
       {
         "indicatorName": "Time management",
         "indicatorValue": 8,
-        "indicatorCategor": "skill"
+        "indicatorCategory": "skill"
       },
       {
         "indicatorName": "UX UI",
         "indicatorValue": 18,
-        "indicatorCategor": "Preference"
+        "indicatorCategory": "Preference"
       },
       {
         "indicatorName": "Passionate",
         "indicatorValue": 2,
-        "indicatorCategor": "Characteristic"
+        "indicatorCategory": "Characteristic"
       }
     ]
   }
