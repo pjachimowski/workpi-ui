@@ -35,9 +35,6 @@ const TopSkills: React.FC<Props> = (props) => {
           height={150}
           options={{
             scale: {
-              // angleLines: {
-              //   lineWidth: 5,
-              // },
               gridLines: {
                 circular: true,
                 borderWidth: 5,

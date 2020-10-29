@@ -7,8 +7,13 @@ import PaneItem from "../PaneItem/PaneItem";
 import * as data from "./data.json";
 import * as _ from "lodash";
 import { Indicator } from "./types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const ProfileSidePane = () => {
+interface Props {
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+}
+
+const ProfileSidePane: React.FC<Props> = () => {
   const [developmentSkills, setDevelopmentSkills] = useState<Indicator[]>([]);
   useEffect(() => {
     setDevelopmentSkills(
@@ -31,17 +36,21 @@ const ProfileSidePane = () => {
     );
   });
 
+  const show = () => {
+    document.getElementById('slide-pane')?.classList.toggle('active');
+  }
+
   // add data to mocked JSON
-  const [personalInfo, setPersonalInfo] = useState();
+  // const [personalInfo, setPersonalInfo] = useState();
 
-  const getDevelopmentSkillsMock = () => {};
+  // const getDevelopmentSkillsMock = () => {};
 
-  const getTopSkillsMock = () => {};
+  // const getTopSkillsMock = () => {};
 
-  const getPersonalInfoMock = () => {};
+  // const getPersonalInfoMock = () => {};
 
   return (
-    <div className="profile-side-pane">
+    <div id="slide-pane" className="profile-side-pane">
       {/*<PaneItem />   this is a container with padding for each pane */}
       <PaneItem>
         <PersonalInfo
@@ -52,9 +61,15 @@ const ProfileSidePane = () => {
           departmentLocation="Amsterdam"
         />
       </PaneItem>
+      
       <PaneItem>
         <TopSkills topSkills={topSkills} />
       </PaneItem>
+      <div className="slide-toggle-btn" onClick={show}>
+      <FontAwesomeIcon 
+          icon={["fas", "grip-lines-vertical"]}
+        ></FontAwesomeIcon>
+      </div>
 
       <PaneItem>
         <DevelopmentSkills developmentSkills={developmentSkills} />
