@@ -59,13 +59,13 @@ const PersonalInfo: React.FC<Props> = () => {
         ></FontAwesomeIcon>
         {user.departmentLocation}
       </div>
-      <button onClick={addField}>
+      <a onClick={addField}>
         <FontAwesomeIcon
           className="icon"
           icon={["fas", "plus-square"]}
         ></FontAwesomeIcon>
         Add field
-      </button>
+      </a>
       <div> {additionalFields} </div>
     </div>
   );

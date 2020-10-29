@@ -7,12 +7,11 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    margin: .4em;
+    margin: 0.4em;
   }
 
-
   .icon {
-      padding-right: .4em;
+    padding-right: 0.4em;
   }
 
   .name {
@@ -44,5 +43,9 @@
     .icon {
       color: $color-primary-2;
     }
+  }
+  a:hover {
+    cursor: pointer;
+    font-weight: bold;
   }
 }
