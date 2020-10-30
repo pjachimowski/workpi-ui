@@ -1,4 +1,4 @@
-{
+export default {
   "indicators": [
     {
       "indicatorID": "1",
@@ -57,4 +57,4 @@
       "IndicatorType": "Business"
     }
   ]
-}
+};

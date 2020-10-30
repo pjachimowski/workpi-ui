@@ -1,4 +1,6 @@
-{
+import { PersonalInfo } from "../types/types";
+
+export default {
   "personalInfo": [
     {
       "indicatorID": "9",
@@ -70,5 +72,5 @@
       "icon": "globe-europe",
       "isActive": false
     }
-  ]
-}
+  ] as PersonalInfo[]
+};
