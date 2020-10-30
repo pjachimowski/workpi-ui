@@ -4,7 +4,7 @@ import styles from './ProgressBar.module.scss';
 
 export type ProgressBarProps = {
   /** The current value. Should be between 0 and maxValue. */
-  value: number
+  value: number 
   /** The maximum value for this progress bar. Should be non-negative.
    * @default 100
    */
