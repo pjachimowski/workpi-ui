@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./TopSkills.scss";
 import { Radar } from "react-chartjs-2";
-import { Indicator } from "../ProfileSidePane/types";
+import { Indicator } from "../../../types/types";
 
 interface Props {
   topSkills: Indicator[];

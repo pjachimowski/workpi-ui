@@ -2,25 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./PersonalInfo.scss";
 import profile from "./profile.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { PersonalInfo as PersonalInfoInterface } from "../../../types/types";
 
 interface Props {
-  name: string;
-  currentJob: string;
-  futureRelevance: string;
-  department: string;
-  departmentLocation: string;
+  personalInfo: PersonalInfoInterface[];
 }
 
-const PersonalInfo: React.FC<Props> = () => {
-  //useState for now overlaps with props
-  const [user, setUser] = useState<Props>({
-    name: "Patryk Jachimowski",
-    currentJob: "Creative Director",
-    futureRelevance: "very probably disappearing",
-    department: "Marketing",
-    departmentLocation: "Amsterdam",
-  });
-
+const PersonalInfo: React.FC<Props> = (props) => {
   const [additionalFields, setAdditionalFields] = useState<string[]>([]);
 
   const addField = () => {
@@ -29,8 +17,21 @@ const PersonalInfo: React.FC<Props> = () => {
 
   return (
     <div className="personal-info">
-      <img src={profile} alt="profile picture"></img>
-      <div className="name">{user.name}</div>
+      <img
+        src="https://i.ibb.co/v1VDC5M/PATRYK-JACHIMOWSKI-2020.jpg"
+        alt="profile picture"
+      ></img>
+      {props.personalInfo.map((x) => (
+        <div>
+          <FontAwesomeIcon
+            className="icon"
+            icon={["fas", x.icon ]}
+          ></FontAwesomeIcon>
+          {x.indicatorInput}
+        </div>
+      ))}
+
+      {/* <div className="name">{props.personalInfo}</div>
       <div className="current-job">
         <FontAwesomeIcon
           className="icon"
@@ -58,7 +59,7 @@ const PersonalInfo: React.FC<Props> = () => {
           icon={["fas", "map-marker-alt"]}
         ></FontAwesomeIcon>
         {user.departmentLocation}
-      </div>
+      </div> */}
       <a onClick={addField}>
         <FontAwesomeIcon
           className="icon"

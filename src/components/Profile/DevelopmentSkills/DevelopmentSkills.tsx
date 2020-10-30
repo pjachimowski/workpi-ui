@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ProgressBar } from "../../Display/ProgressBar";
 import "./DevelopmentSkills.scss";
-import { Indicator } from "../ProfileSidePane/types";
+import { Indicator } from "../../../types/types";
 
 interface Props {
   developmentSkills: Indicator[];
