@@ -24,7 +24,7 @@ const ProfileSidePane: React.FC<Props> = () => {
         .take(3)
         .value()
     );
-  });
+  },[]);
 
   const [topSkills, setTopSkills] = useState<Indicator[]>([]);
   useEffect(() => {
@@ -35,7 +35,7 @@ const ProfileSidePane: React.FC<Props> = () => {
         .take(3)
         .value()
     );
-  });
+  },[]);
 
   const [personalInfo, setPersonalInfo] = useState<PersonalInfoInterface[]>([]);
   useEffect(() => {
@@ -44,7 +44,7 @@ const ProfileSidePane: React.FC<Props> = () => {
         .filter((x) => x.isActive === true)
         .value()
     );
-  });
+  },[]);
 
   const show = () => {
     document.getElementById("slide-pane")?.classList.toggle("active");
