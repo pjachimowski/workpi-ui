@@ -37,8 +37,8 @@ const ProfileSidePane: React.FC<Props> = () => {
   });
 
   const show = () => {
-    document.getElementById('slide-pane')?.classList.toggle('active');
-  }
+    document.getElementById("slide-pane")?.classList.toggle("active");
+  };
 
   // add data to mocked JSON
   // const [personalInfo, setPersonalInfo] = useState();
@@ -50,31 +50,30 @@ const ProfileSidePane: React.FC<Props> = () => {
   // const getPersonalInfoMock = () => {};
 
   return (
-    <div id="slide-pane" className="profile-side-pane">
-      {/*<PaneItem />   this is a container with padding for each pane */}
-      <PaneItem>
-        <PersonalInfo
-          name="Patryk Jachimowski"
-          currentJob="Creative Director"
-          futureRelevance="very probably disappearing"
-          department="Marketing"
-          departmentLocation="Amsterdam"
-        />
-      </PaneItem>
-      
-      <PaneItem>
-        <TopSkills topSkills={topSkills} />
-      </PaneItem>
-      <div className="slide-toggle-btn" onClick={show}>
-      <FontAwesomeIcon 
-          icon={["fas", "grip-lines-vertical"]}
-        ></FontAwesomeIcon>
-      </div>
+      <div id="slide-pane" className="profile-side-pane">
+        {/*<PaneItem />   this is a container with padding for each pane */}
+        <PaneItem>
+          <PersonalInfo
+            name="Patryk Jachimowski"
+            currentJob="Creative Director"
+            futureRelevance="very probably disappearing"
+            department="Marketing"
+            departmentLocation="Amsterdam"
+          />
+        </PaneItem>
 
-      <PaneItem>
-        <DevelopmentSkills developmentSkills={developmentSkills} />
-      </PaneItem>
-    </div>
+        <PaneItem>
+          <TopSkills topSkills={topSkills} />
+        </PaneItem>
+        <div className="slide-toggle-btn" onClick={show}>
+          <FontAwesomeIcon
+            icon={["fas", "grip-lines-vertical"]}
+          ></FontAwesomeIcon>
+        </div>
+        <PaneItem>
+          <DevelopmentSkills developmentSkills={developmentSkills} />
+        </PaneItem>
+      </div>
   );
 };
 

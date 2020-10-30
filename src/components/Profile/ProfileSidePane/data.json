@@ -1,44 +1,166 @@
 {
   "indicators": [
     {
+      "indicatorID": "1",
       "indicatorName": "Adapdability",
       "indicatorValue": 95,
-      "indicatorCategory": "Skill"
+      "indicatorCategory": "Skill",
+      "IndicatorType": "Business",
+      "icon": null,
+      "isActive": true
     },
     {
+      "indicatorID": "2",
       "indicatorName": "Coaching",
       "indicatorValue": 85,
-      "indicatorCategory": "Skill"
+      "indicatorCategory": "Skill",
+      "IndicatorType": "Business",
+      "icon": null,
+      "isActive": true
     },
     {
+      "indicatorID": "3",
       "indicatorName": "Creativity",
       "indicatorValue": 70,
-      "indicatorCategory": "Skill"
+      "indicatorCategory": "Skill",
+      "IndicatorType": "Technical",
+      "icon": null,
+      "isActive": true
     },
     {
+      "indicatorID": "4",
       "indicatorName": "Concetration",
       "indicatorValue": 30,
-      "indicatorCategory": "Skill"
+      "indicatorCategory": "Skill",
+      "IndicatorType": "Business",
+      "icon": null,
+      "isActive": true
     },
     {
+      "indicatorID": "5",
       "indicatorName": "English Writing",
       "indicatorValue": 55,
-      "indicatorCategory": "Skill"
+      "indicatorCategory": "Skill",
+      "IndicatorType": "Business",
+      "icon": null,
+      "isActive": true
     },
     {
+      "indicatorID": "6",
       "indicatorName": "Presenting",
       "indicatorValue": 60,
-      "indicatorCategory": "Skill"
+      "indicatorCategory": "Skill",
+      "IndicatorType": "Business",
+      "icon": null,
+      "isActive": true
     },
     {
+      "indicatorID": "7",
       "indicatorName": "UX UI",
       "indicatorValue": 95,
-      "indicatorCategory": "Preference"
+      "indicatorCategory": "Preference",
+      "IndicatorType": "Technical",
+      "icon": null,
+      "isActive": true
     },
     {
+      "indicatorID": "8",
       "indicatorName": "Passionate",
       "indicatorValue": 70,
-      "indicatorCategory": "Characteristic"
+      "indicatorCategory": "Characteristic",
+      "IndicatorType": "Business",
+      "icon": null,
+      "isActive": true
+    },
+    {
+      "indicatorID": "9",
+      "indicatorName": "full name",
+      "indicatorValue": "Partyk Jachimowski",
+      "indicatorCategory": "Characteristic",
+      "IndicatorType": "Personal",
+      "icon": "user-circle",
+      "isActive": true
+    },
+    {
+      "indicatorID": "10",
+      "indicatorName": "current job",
+      "indicatorValue": "Creative Director",
+      "indicatorCategory": "Characteristic",
+      "IndicatorType": "Personal",
+      "icon": "briefcase",
+      "isActive": true
+    },
+    {
+      "indicatorID": "11",
+      "indicatorName": "future relevance",
+      "indicatorValue": "very probably disappearing",
+      "indicatorCategory": "Characteristic",
+      "IndicatorType": "Personal",
+      "icon": "forward",
+      "isActive": true
+    },
+    {
+      "indicatorID": "12",
+      "indicatorName": "department",
+      "indicatorValue": "Marketing",
+      "indicatorCategory": "Characteristic",
+      "IndicatorType": "Personal",
+      "icon": "building",
+      "isActive": true
+    },
+    {
+      "indicatorID": "13",
+      "indicatorName": "department location",
+      "indicatorValue": "Amsterdam",
+      "indicatorCategory": "Characteristic",
+      "IndicatorType": "Personal",
+      "icon": "map-marker-alt",
+      "isActive": true
+    },
+    {
+      "indicatorID": "14",
+      "indicatorName": "previous education",
+      "indicatorValue": "Full Stack Software Developer",
+      "indicatorCategory": "Characteristic",
+      "IndicatorType": "Personal",
+      "icon": "graduation-cap",
+      "isActive": false
+    },
+    {
+      "indicatorID": "15",
+      "indicatorName": "development courses",
+      "indicatorValue": "UX UI",
+      "indicatorCategory": "Characteristic",
+      "IndicatorType": "Personal",
+      "icon": "award",
+      "isActive": false
+    },
+    {
+      "indicatorID": "16",
+      "indicatorName": "specializations",
+      "indicatorValue": "React",
+      "indicatorCategory": "Characteristic",
+      "IndicatorType": "Personal",
+      "icon": "book-reader",
+      "isActive": false
+    },
+    {
+      "indicatorID": "17",
+      "indicatorName": "interests",
+      "indicatorValue": "Swimming",
+      "indicatorCategory": "Characteristic",
+      "IndicatorType": "Personal",
+      "icon": "smile",
+      "isActive": false
+    },
+    {
+      "indicatorID": "18",
+      "indicatorName": "languages",
+      "indicatorValue": "Polish, English, Dutch",
+      "indicatorCategory": "Characteristic",
+      "IndicatorType": "Personal",
+      "icon": "globe-europe",
+      "isActive": false
     }
   ]
 }
