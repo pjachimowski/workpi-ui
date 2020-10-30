@@ -36,17 +36,23 @@ const ProfileSidePane: React.FC<Props> = () => {
     );
   });
 
+  const [personalInfo, setPersonalInfo] = useState<Indicator[]>([]);
+  useEffect(() => {
+    setPersonalInfo(
+      _.chain(data.personalInfo)
+        .filter((x) => x.isActive === true)
+        .value()
+    );
+  });
+
   const show = () => {
     document.getElementById("slide-pane")?.classList.toggle("active");
   };
 
   // add data to mocked JSON
   // const [personalInfo, setPersonalInfo] = useState();
-
   // const getDevelopmentSkillsMock = () => {};
-
   // const getTopSkillsMock = () => {};
-
   // const getPersonalInfoMock = () => {};
 
   return (
@@ -54,11 +60,7 @@ const ProfileSidePane: React.FC<Props> = () => {
         {/*<PaneItem />   this is a container with padding for each pane */}
         <PaneItem>
           <PersonalInfo
-            name="Patryk Jachimowski"
-            currentJob="Creative Director"
-            futureRelevance="very probably disappearing"
-            department="Marketing"
-            departmentLocation="Amsterdam"
+            personalInfo={personalInfo}
           />
         </PaneItem>
 

@@ -71,7 +71,9 @@
       "IndicatorType": "Business",
       "icon": null,
       "isActive": true
-    },
+    }
+  ],
+  "personalInfo": [
     {
       "indicatorID": "9",
       "indicatorName": "full name",
