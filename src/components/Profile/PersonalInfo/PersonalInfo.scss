@@ -16,15 +16,14 @@
 
   .user-name {
     font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    text-transform: capitalize;
   }
 
   .current-job, .briefcase {
     color: $color-primary-2;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
   }
 
   .forward, .building, .globe-europe {

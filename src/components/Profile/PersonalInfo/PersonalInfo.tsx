@@ -24,7 +24,11 @@ const PersonalInfo: React.FC<Props> = ({ user, list, updatePersonalInfo }: Props
     <div className="personal-info">
       <img src={user.profile_picture} alt="profile picture"></img>
       <div className="user-name">{user.user_name}</div>
-      <div className="current-job">{user.current_job}</div>
+      <div className="current-job"><FontAwesomeIcon
+            id="icon"
+            className="briefcase"
+            icon={["fas", "briefcase"]}
+          ></FontAwesomeIcon> {user.current_job}</div>
       {getActivePersonalInfo(list).map((x) => (
         <div>
           <FontAwesomeIcon
