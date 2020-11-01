@@ -1,0 +1,66 @@
+@import "~theme/workpi.scss";
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    width: 64px;
+    height: 100%;
+    border-right: 2px solid #fddd4d;
+    flex-shrink: 0;
+    z-index: 100;
+  }
+  
+  nav .logo {
+    background-image: url(../../../../);
+    height: 48px;
+    width: 48px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 24px 8px;
+  }
+  
+  nav .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  nav .system {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 88px;
+  }
+  
+  nav .button {
+    display: flex;
+    height: 64px;
+    width: 64px;
+    font-size: 28px;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #eee;
+    cursor: pointer;
+    transition: all 300ms;
+  }
+  
+  nav .button:last-child {
+    border-bottom: 1px solid #eee;
+  }
+  
+  nav .button:hover {
+    background: #eee;
+  }
+  
+  nav .button.active {
+    color: white;
+    background: #fddd4d;
+    border-color: #fddd4d;
+  }
+  
+  nav .button.active:hover {
+    box-shadow: 0 0 12px rgba(253, 221, 77, 0.5);
+  }

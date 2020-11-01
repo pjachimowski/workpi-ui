@@ -3,20 +3,6 @@ import { PersonalInfo } from "../types/types";
 export default {
   "personalInfo": [
     {
-      "indicatorID": "9",
-      "indicatorName": "full name",
-      "indicatorInput": "Partyk Jachimowski",
-      "icon": "user-circle",
-      "isActive": true
-    },
-    {
-      "indicatorID": "10",
-      "indicatorName": "current job",
-      "indicatorInput": "Creative Director",
-      "icon": "briefcase",
-      "isActive": true
-    },
-    {
       "indicatorID": "11",
       "indicatorName": "future relevance",
       "indicatorInput": "very probably disappearing",

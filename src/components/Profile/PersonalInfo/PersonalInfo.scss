@@ -10,37 +10,44 @@
     margin: 0.4em;
   }
 
-  .icon {
-    padding-right: 0.4em;
+  #icon {
+    margin-right: 5px;
   }
 
-  .name {
+  .user-name {
     font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 
-  .current-job {
+  .current-job, .briefcase {
     color: $color-primary-2;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
   }
 
-  .future-relevance .icon {
+  .forward, .building, .globe-europe {
     color: $color-grey-2;
   }
 
-  .department .icon {
-    color: $color-grey-2;
+  .graduation-cap, .award {
+    color: rgb(34, 37, 165);
   }
 
-  .department-location .icon {
+
+  .map-marker-alt, .book-reader {
     color: rgb(202, 102, 181);
+  }
+
+  .smile {
+    color: rgb(102, 202, 110)
   }
 
   a {
     color: $color-dark-grey-2;
     text-decoration: none;
-    .icon {
+    .add-btn {
       color: $color-primary-2;
     }
   }

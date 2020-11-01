@@ -1,7 +1,7 @@
 import { IconName } from "@fortawesome/fontawesome-svg-core";
 
 export interface Indicator {
-  indicatorID?: string | symbol,
+  indicatorID?: string | symbol;
   indicatorName: string | symbol;
   indicatorValue: number;
   indicatorCategory: string | symbol;
@@ -9,9 +9,20 @@ export interface Indicator {
 }
 
 export interface PersonalInfo {
-  indicatorID?: string | symbol,
+  indicatorID?: string | symbol;
   indicatorName: string | symbol;
   indicatorInput: string;
   icon: IconName;
-  isActive?: boolean;
+  isActive: boolean;
+}
+
+export interface User {
+  user_name: string;
+  current_job: string;
+  profile_picture: string;
+  isActive: boolean;
+}
+
+export interface Nav {
+  text?: string;
 }

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { ProgressBar } from "../../Display/ProgressBar";
 import "./DevelopmentSkills.scss";
-import { Indicator } from "../../../types/types";
+import { Indicator as IndicatorInterface } from "../../../types/types";
 
 interface Props {
-  developmentSkills: Indicator[];
+  developmentSkills: IndicatorInterface[];
 }
 
 const DevelopmentSkills: React.FC<Props> = (props) => {

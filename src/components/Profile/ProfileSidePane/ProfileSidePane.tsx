@@ -4,6 +4,7 @@ import DevelopmentSkills from "../DevelopmentSkills/DevelopmentSkills";
 import PersonalInfo from "../PersonalInfo/PersonalInfo";
 import TopSkills from "../TopSkills/TopSkills";
 import PaneItem from "../PaneItem/PaneItem";
+import userMock from "../../../data_mocked/userApiMock";
 import indicatorsApiMock from "../../../data_mocked/indicatorsApiMock";
 import personalInfoApiMock from "../../../data_mocked/personalInfoApiMock";
 import * as _ from "lodash";
@@ -54,7 +55,7 @@ const ProfileSidePane: React.FC<Props> = () => {
     <div id="slide-pane" className="profile-side-pane">
       {/*<PaneItem />   this is a container with padding for each pane */}
       <PaneItem>
-        <PersonalInfo personalInfo={personalInfo} />
+        <PersonalInfo user={userMock} personalInfo={personalInfo} />
       </PaneItem>
 
       <PaneItem>

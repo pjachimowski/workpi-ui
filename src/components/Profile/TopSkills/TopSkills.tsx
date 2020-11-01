@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./TopSkills.scss";
 import { Radar } from "react-chartjs-2";
-import { Indicator } from "../../../types/types";
+import { Indicator as IndicatorInterface} from "../../../types/types";
 
 interface Props {
-  topSkills: Indicator[];
+  topSkills: IndicatorInterface[];
 }
 
 const TopSkills: React.FC<Props> = (props) => {
