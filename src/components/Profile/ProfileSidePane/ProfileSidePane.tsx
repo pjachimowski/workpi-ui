@@ -7,7 +7,7 @@ import PaneItem from "../PaneItem/PaneItem";
 import indicatorsApiMock from "../../../data_mocked/indicatorsApiMock";
 import personalInfoApiMock from "../../../data_mocked/personalInfoApiMock";
 import * as _ from "lodash";
-import { Indicator, PersonalInfo as PersonalInfoInterface } from "../../../types/types";
+import { Indicator as IndicatorInterface, PersonalInfo as PersonalInfoInterface } from "../../../types/types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface Props {
@@ -15,7 +15,7 @@ interface Props {
 }
 
 const ProfileSidePane: React.FC<Props> = () => {
-  const [developmentSkills, setDevelopmentSkills] = useState<Indicator[]>([]);
+  const [developmentSkills, setDevelopmentSkills] = useState<IndicatorInterface[]>([]);
   useEffect(() => {
     setDevelopmentSkills(
       _.chain(indicatorsApiMock.indicators)
@@ -26,7 +26,7 @@ const ProfileSidePane: React.FC<Props> = () => {
     );
   },[]);
 
-  const [topSkills, setTopSkills] = useState<Indicator[]>([]);
+  const [topSkills, setTopSkills] = useState<IndicatorInterface[]>([]);
   useEffect(() => {
     setTopSkills(
       _.chain(indicatorsApiMock.indicators)
