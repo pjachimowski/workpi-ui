@@ -5,8 +5,7 @@ $break-large: 1024px;
 
 #slide-pane .slide-toggle-btn {
   position: absolute;
-  // top: 30px;
-  left: 322px;
+  left: 364px;
 }
 
 #slide-pane.active {
@@ -23,7 +22,7 @@ $break-large: 1024px;
   border: 1px solid $color-grey-2;
   display: block;
   margin-top: 94px;
-  :hover{
+  :hover {
     cursor: pointer;
     color: $color-dark-grey-2;
   }
@@ -45,7 +44,7 @@ $break-large: 1024px;
   left: 0;
   // old width: 50%
   // new width: 400px;
-  width: 400px;
+  width: 364px;
   transition: 0.4s;
 
   /*padding-top 64(hight on the navbar) + 5 */
@@ -53,14 +52,40 @@ $break-large: 1024px;
   height: 100%;
 }
 
+.user-circle {
+  display: none;
+}
+.grip-lines-vertical {
+  display: inline;
+}
+
+
 @media screen and (max-width: 376px) {
   .profile-side-pane {
     position: absolute;
     width: 100%;
   }
+  #slide-pane.active {
+    left: -364px;
+  }
+  #slide-pane .slide-toggle-btn {
+    position: fixed;
+    padding: 5px;
+    left: 10px;
+    top: 50%;
+    z-index: 1;
+    width: 25px;
+    border-radius: 50%;
+  }
+  .user-circle {
+    display: inline;
+  }
+  .grip-lines-vertical {
+    display: none;
+  }
 }
 @media screen and (min-width: 1200px) {
   .profile-side-pane {
-    width: 25%;
+    width: 364px;
   }
 }

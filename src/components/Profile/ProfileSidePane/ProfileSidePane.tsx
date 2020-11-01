@@ -61,8 +61,11 @@ const ProfileSidePane: React.FC<Props> = () => {
         <TopSkills topSkills={topSkills} />
       </PaneItem>
       <div className="slide-toggle-btn" onClick={show}>
-        <FontAwesomeIcon
+        <FontAwesomeIcon className="grip-lines-vertical"
           icon={["fas", "grip-lines-vertical"]}
+        ></FontAwesomeIcon>
+        <FontAwesomeIcon className="user-circle"
+          icon={["fas", "user-circle"]}
         ></FontAwesomeIcon>
       </div>
       <PaneItem>
