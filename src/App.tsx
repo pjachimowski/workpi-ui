@@ -25,7 +25,7 @@ import { DialogTargetContainer } from "./components/Dialog";
 import { AppNavBar } from "./components/Navigation/AppNavBar";
 import { GoogleAuth } from "./components/Auth/GoogleAuth";
 
-import ProfileSidePane from "../src/components/Profile/ProfileSidePane/ProfileSidePane";
+import SidePane from "./components/Profile/SidePane/SidePane";
 
 library.add(fas, fab as any);
 
@@ -63,8 +63,7 @@ const App: React.FC<{}> = (props) => {
                 <Route path="/register">
                   <RegisterView></RegisterView>
                 </Route>
-
-                <ProfileSidePane />
+                <SidePane />
               </Switch>
             </BrowserRouter>
           </div>

@@ -1,0 +1,94 @@
+@import "~theme/workpi.scss";
+
+#slide-pane.active {
+  left: -350px;
+}
+
+.slide-toggle-btn {
+  position: absolute;
+  left: 364px;
+  color: $color-grey-2;
+  font-size: 18px;
+  width: 15px;
+  height: 25px;
+  background: $grad-grey-tb;
+  border-radius: 3px;
+  border: 1px solid $color-grey-2;
+  display: block;
+  margin-top: 94px;
+  :hover {
+    cursor: pointer;
+    color: $color-dark-grey-2;
+  }
+}
+
+.profile-side-pane {
+  background-color: $color-grey-1;
+  border: 1px solid $color-dark-fg;
+  outline: 1px solid $color-grey-2;
+  box-shadow: inset -7px 0 9px -7px rgba(0, 0, 0, 0.4);
+  font-size: 10px;
+  line-height: 1.6;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  width: 344px;
+  transition: 0.4s;
+  /*padding-top 64(hight on the navbar) + 5 */
+  padding: 69px 15px 5px 15px;
+  height: 100%;
+}
+
+/* Icon for the Profile Side Pane Slide Button*/
+.user-circle {
+  display: none;
+}
+.chevron-circle-left {
+  display: none;
+}
+
+.grip-lines-vertical {
+  display: inline;
+}
+
+@include small-screen {
+  .profile-side-pane {
+    position: absolute;
+    width: 100%;
+    .chevron-circle-left {
+      display: inline;
+      :hover {
+        cursor: pointer;
+        color: $color-dark-grey-2;
+      }
+    }
+    .user-circle {
+      display: none;
+    }
+  }
+  #slide-pane.active {
+    left: -375px;
+    .user-circle {
+      display: inline;
+      :hover {
+        cursor: pointer;
+        color: $color-dark-grey-2;
+      }
+    }
+    .chevron-circle-left {
+      display: none;
+    }
+  }
+  #slide-pane .slide-toggle-btn {
+    position: fixed;
+    padding: 5px;
+    left: 10px;
+    top: 50%;
+    z-index: 1;
+    width: 25px;
+    border-radius: 50%;
+  }
+  .grip-lines-vertical {
+    display: none;
+  }
+}
