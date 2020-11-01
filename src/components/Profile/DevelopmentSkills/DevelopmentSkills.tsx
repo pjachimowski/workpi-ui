@@ -3,7 +3,7 @@ import { ProgressBar } from "../../Display/ProgressBar";
 import "./DevelopmentSkills.scss";
 import { Indicator as IndicatorInterface } from "../../../types/types";
 
-interface Props {
+export interface Props {
   developmentSkills: IndicatorInterface[];
 }
 

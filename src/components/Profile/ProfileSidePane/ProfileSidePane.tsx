@@ -40,12 +40,17 @@ const ProfileSidePane: React.FC<Props> = () => {
 
   const [personalInfo, setPersonalInfo] = useState<PersonalInfoInterface[]>([]);
   useEffect(() => {
-    setPersonalInfo(
-      _.chain(personalInfoApiMock.personalInfo)
+    setPersonalInfo(personalInfoApiMock.personalInfo);
+  },[]);
+
+  const [personalInfoActive, setPersonalInfoActive] = useState<PersonalInfoInterface[]>([]);
+  useEffect(() => {
+    setPersonalInfoActive(
+      _.chain(personalInfo)
         .filter((x) => x.isActive === true)
         .value()
     );
-  },[]);
+  },[personalInfo]);
 
   const show = () => {
     document.getElementById("slide-pane")?.classList.toggle("active");
@@ -55,7 +60,7 @@ const ProfileSidePane: React.FC<Props> = () => {
     <div id="slide-pane" className="profile-side-pane">
       {/*<PaneItem />   this is a container with padding for each pane */}
       <PaneItem>
-        <PersonalInfo user={userMock} personalInfo={personalInfo} />
+        <PersonalInfo user={userMock} personalInfo={personalInfoActive} />
       </PaneItem>
 
       <PaneItem>
