@@ -36,17 +36,25 @@ const PersonalInfo: React.FC<Props> = ({
         ></FontAwesomeIcon>{" "}
         {userProfile.currentJob}
       </div>
-      {getActivePersonalInfo(list).map((x) => (
-        <div>
-          <FontAwesomeIcon
-            id="icon"
-            className={x.icon}
-            icon={["fas", x.icon]}
-          ></FontAwesomeIcon>
-          {x.indicatorInput}
-        </div>
-      ))}
+      <div className="personal-info-active">
+        {getActivePersonalInfo(list).map((x) => (
+          <div className="personal-info-items">
+            <span>
+              <FontAwesomeIcon
+                id="icon"
+                className={x.icon}
+                icon={["fas", x.icon]}
+              ></FontAwesomeIcon>
+              {x.indicatorInput}
+            </span>
+          </div>
+        ))}
+      </div>
+      <div className="edit-btn">
+
       <EditBtn updatePersonalInfo={updatePersonalInfo} list={list} />
+
+      </div>
     </div>
   );
 };

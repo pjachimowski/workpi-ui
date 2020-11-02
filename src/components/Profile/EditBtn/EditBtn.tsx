@@ -19,7 +19,6 @@ const EditBtn: React.FC<Props> = (props) => {
     return list.map((x) => {
       return (
         <div>
-          
           <input
           className="checkbox"
           type="checkbox"
@@ -27,7 +26,6 @@ const EditBtn: React.FC<Props> = (props) => {
           onChange={() => props.updatePersonalInfo(x.indicatorName)}
           />
           <label> {x.indicatorName} </label>
-        
         </div>
       );
     });
@@ -37,13 +35,12 @@ const EditBtn: React.FC<Props> = (props) => {
     <div>
       <a onClick={changeShowListState}>
         <FontAwesomeIcon
-          className="add-btn"
+          className="user-edit"
           id="icon"
           icon={["fas", "user-edit"]}
-        ></FontAwesomeIcon>
-        Edit
+        ></FontAwesomeIcon> Edit
       </a>
-      <div className="personal-infolist"> {showList ? getList(props.list) : ""} </div>
+      <div className="personal-info-list"> {showList ? getList(props.list) : ""} </div>
     </div>
   );
 };

@@ -5,8 +5,7 @@
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  max-height: 170px;
-
+  max-height: 190px;
 
   img {
     width: 45px;
@@ -16,7 +15,7 @@
   }
 
   #icon {
-    margin-right: 5px;
+    margin: 0 3px 0 6px;
   }
 
   .user-name {
@@ -55,7 +54,7 @@
   a {
     color: $color-dark-grey-2;
     text-decoration: none;
-    .add-btn {
+    .user-edit {
       color: $color-primary-2;
     }
   }
@@ -63,10 +62,11 @@
     cursor: pointer;
     font-weight: bold;
   }
-}
-
-@include small-screen {
-  .personal-info {
-    text-align: left;
+  .personal-info-items {
+    display: inline-block;
+  }
+  .personal-info-active {
+    max-width: 200px;
+    line-height: 1.4;
   }
 }
