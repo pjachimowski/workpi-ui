@@ -37,5 +37,5 @@ const Template: Story<Props> = (args) => <EditBtn {...args} />;
 export const Normal = Template.bind({});
 Normal.args = {
   updatePersonalInfo,
-  list
+  list,
 };

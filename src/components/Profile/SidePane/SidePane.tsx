@@ -42,12 +42,12 @@ const SidePane: React.FC<Props> = () => {
         .value()
     );
   }, []);
-// Gets all personal information from mocked data
+  // Gets all personal information from mocked data
   const [personalInfo, setPersonalInfo] = useState<PersonalInfoInterface[]>([]);
   useEffect(() => {
     setPersonalInfo(personalInfoApiMock.personalInfo);
   }, []);
-// Updates personal info active in the component 
+  // Updates personal info active in the component
   const updateActivePersonalInfo = (indicatorName: string | symbol) => {
     let activePersonalInfo = personalInfo.slice();
     for (let key in activePersonalInfo) {
@@ -71,7 +71,6 @@ const SidePane: React.FC<Props> = () => {
           userProfile={userProfileMock}
         />
       </Wrapper>
-
       <Wrapper>
         <TopSkills topSkills={topSkills} />
       </Wrapper>

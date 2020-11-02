@@ -41,7 +41,7 @@ const userProfile = {
   isLoggedIn: true,
 } as UserProfile;
 
-const updatePersonalInfo = () => {}
+const updatePersonalInfo = () => {};
 
 const Template: Story<Props> = (args) => <PersonalInfo {...args} />;
 
