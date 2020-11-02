@@ -47,7 +47,7 @@ const SidePane: React.FC<Props> = () => {
   useEffect(() => {
     setPersonalInfo(personalInfoApiMock.personalInfo);
   }, []);
-  // Updates personal info active in the component
+  // Updates only active personal info in the component
   const updateActivePersonalInfo = (indicatorName: string | symbol) => {
     let activePersonalInfo = personalInfo.slice();
     for (let key in activePersonalInfo) {
@@ -58,10 +58,11 @@ const SidePane: React.FC<Props> = () => {
     }
     setPersonalInfo(activePersonalInfo);
   };
-
+  // hides and shows entire Side Pane
   const show = () => {
     document.getElementById("slide-pane")?.classList.toggle("active");
   };
+
   return (
     <div id="slide-pane" className="profile-side-pane">
       <Wrapper>

@@ -67,6 +67,7 @@ This element was new to me and I had a great time learning and discovering its e
 2) There were some styling elements used by designers which were missing in documentation od Chart.js. Current state is the closest to the one from the assigment. 
 3) I did encountered several bugs along the way and therefor I worked on several branches. 
 4) There is a NewNav folder created when I was trying to implement a navbar on the side of the page. Due to lack of time I was unable to finish that extra part. 
+5) I used ProgressBar component from Display folder and I also edited it there.
 
 ### IN THE FUTURE
 If time would allow I would deffinitely correct personal information list on mobile, add more interesting praphs and move navigation bar to the side (which should not be a big problem).

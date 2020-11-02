@@ -56,11 +56,11 @@ input[type="checkbox"] {
     display: inline;
     border-radius: 50%;
     background-color: $color-primary-1;
-    #icon {
-      color: white;
-    }
     :hover {
       box-shadow: $glow-primary-2;
+    }
+    #icon {
+      color: white;
     }
   }
   .edit-btn-text-desktop {
@@ -79,7 +79,7 @@ input[type="checkbox"] {
     background-color: $color-primary-2;
     font-weight: bold;
     font-size: 14px;
-    color: white;
+    color: $color-dark-fg;
     box-shadow: $glow-shadow;
   }
   .custom-check-box {
@@ -90,7 +90,6 @@ input[type="checkbox"] {
     width: 10px;
     background-color: $color-dark-fg;
     border-radius: 4px;
-    border: solid 1px $color-grey-1;
   }
 
   .label:hover input ~ .custom-check-box {

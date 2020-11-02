@@ -48,17 +48,16 @@ const EditBtn: React.FC<Props> = ({ updatePersonalInfo, list }: Props) => {
         ></FontAwesomeIcon>{" "}
         Edit
       </a>
-      <a className="edit-btn-text-mobile" onClick={changeShowListState}>
-        <FontAwesomeIcon
-          className="user-edit"
-          id="icon"
-          icon={["fas", "user-edit"]}
-        ></FontAwesomeIcon>{" "}
-      </a>
       <div>
-        {" "}
-        {showList ? getList(list) : ""}{" "}
+        <a className="edit-btn-text-mobile" onClick={changeShowListState}>
+          <FontAwesomeIcon
+            className="user-edit"
+            id="icon"
+            icon={["fas", "user-edit"]}
+          ></FontAwesomeIcon>{" "}
+        </a>
       </div>
+      <div> {showList ? getList(list) : ""} </div>
     </div>
   );
 };

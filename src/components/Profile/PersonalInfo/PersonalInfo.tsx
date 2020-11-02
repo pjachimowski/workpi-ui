@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./PersonalInfo.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -41,7 +41,7 @@ const PersonalInfo: React.FC<Props> = ({
       </div>
       <div className="personal-info-active">
         {getActivePersonalInfo(list).map((x) => (
-          <div className="personal-info-items">
+          <div key={x.indicatorID} className="personal-info-items">
             <span>
               <FontAwesomeIcon
                 id="icon"

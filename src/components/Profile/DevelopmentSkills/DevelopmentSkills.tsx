@@ -13,7 +13,7 @@ const DevelopmentSkills: React.FC<Props> = ({ developmentSkills }: Props) => {
       {/*Progress Bars modyfied in ../../Display/ProgressBar*/}
       <h2>Development Skills</h2>
       {developmentSkills.map((x) => (
-        <div className="development-skills-item">
+        <div key={x.indicatorID} className="development-skills-item">
           {x.indicatorName}
           <ProgressBar value={x.indicatorValue} />
         </div>
