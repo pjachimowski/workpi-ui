@@ -42,28 +42,26 @@ const SidePane: React.FC<Props> = () => {
         .value()
     );
   }, []);
-
+// Gets all personal information from mocked data
   const [personalInfo, setPersonalInfo] = useState<PersonalInfoInterface[]>([]);
   useEffect(() => {
     setPersonalInfo(personalInfoApiMock.personalInfo);
   }, []);
+// Updates personal info active in the component 
+  const updateActivePersonalInfo = (indicatorName: string | symbol) => {
+    let activePersonalInfo = personalInfo.slice();
+    for (let key in activePersonalInfo) {
+      if (activePersonalInfo[key].indicatorName === indicatorName) {
+        activePersonalInfo[key].isActive = !activePersonalInfo[key].isActive;
+        break;
+      }
+    }
+    setPersonalInfo(activePersonalInfo);
+  };
 
   const show = () => {
     document.getElementById("slide-pane")?.classList.toggle("active");
   };
-
-  const updateActivePersonalInfo = (indicatorName: string | symbol) => {
-    let personalInfoTABLICA = personalInfo.slice()
-    for (let key in personalInfoTABLICA) {
-
-      if (personalInfoTABLICA[key].indicatorName === indicatorName) {
-        personalInfoTABLICA[key].isActive = !personalInfoTABLICA[key].isActive;
-        break;
-      }
-    }
-    setPersonalInfo(personalInfoTABLICA);
-  };
-
   return (
     <div id="slide-pane" className="profile-side-pane">
       <Wrapper>

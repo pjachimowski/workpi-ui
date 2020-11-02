@@ -5,7 +5,7 @@ import {
   UserProfile as UserProfileInterface,
   PersonalInfo as PersonalInfoInterface,
 } from "../../../types/types";
-import AddField from "../AddField/AddField";
+import EditBtn from "../EditBtn/EditBtn";
 import * as _ from "lodash";
 
 interface Props {
@@ -14,7 +14,11 @@ interface Props {
   updatePersonalInfo: (indicatorName: string | symbol) => void;
 }
 
-const PersonalInfo: React.FC<Props> = ({ userProfile, list, updatePersonalInfo }: Props) => {
+const PersonalInfo: React.FC<Props> = ({
+  userProfile,
+  list,
+  updatePersonalInfo,
+}: Props) => {
   const getActivePersonalInfo = (list: PersonalInfoInterface[]) =>
     _.chain(list)
       .filter((x) => x.isActive === true)
@@ -24,11 +28,14 @@ const PersonalInfo: React.FC<Props> = ({ userProfile, list, updatePersonalInfo }
     <div className="personal-info">
       <img src={userProfile.profilePicture} alt="profile"></img>
       <div className="user-name">{userProfile.userName}</div>
-      <div className="current-job"><FontAwesomeIcon
-            id="icon"
-            className="briefcase"
-            icon={["fas", "briefcase"]}
-          ></FontAwesomeIcon> {userProfile.currentJob}</div>
+      <div className="current-job">
+        <FontAwesomeIcon
+          id="icon"
+          className="briefcase"
+          icon={["fas", "briefcase"]}
+        ></FontAwesomeIcon>{" "}
+        {userProfile.currentJob}
+      </div>
       {getActivePersonalInfo(list).map((x) => (
         <div>
           <FontAwesomeIcon
@@ -39,7 +46,7 @@ const PersonalInfo: React.FC<Props> = ({ userProfile, list, updatePersonalInfo }
           {x.indicatorInput}
         </div>
       ))}
-      <AddField updatePersonalInfo={updatePersonalInfo} list={list} />
+      <EditBtn updatePersonalInfo={updatePersonalInfo} list={list} />
     </div>
   );
 };

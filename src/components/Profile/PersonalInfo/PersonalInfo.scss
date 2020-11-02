@@ -1,7 +1,12 @@
 @import "~theme/workpi.scss";
 
 .personal-info {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  max-height: 170px;
+
 
   img {
     width: 45px;
@@ -19,28 +24,32 @@
     text-transform: capitalize;
   }
 
-  .current-job, .briefcase {
+  .current-job,
+  .briefcase {
     color: $color-primary-2;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
   }
 
-  .forward, .building, .globe-europe {
+  .forward,
+  .building,
+  .globe-europe {
     color: $color-grey-2;
   }
 
-  .graduation-cap, .award {
+  .graduation-cap,
+  .award {
     color: rgb(34, 37, 165);
   }
 
-
-  .map-marker-alt, .book-reader {
+  .map-marker-alt,
+  .book-reader {
     color: rgb(202, 102, 181);
   }
 
   .smile {
-    color: rgb(102, 202, 110)
+    color: rgb(102, 202, 110);
   }
 
   a {
@@ -53,5 +62,11 @@
   a:hover {
     cursor: pointer;
     font-weight: bold;
+  }
+}
+
+@include small-screen {
+  .personal-info {
+    text-align: left;
   }
 }
