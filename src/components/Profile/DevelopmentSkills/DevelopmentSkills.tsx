@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { ProgressBar } from "../../Display/ProgressBar";
 import "./DevelopmentSkills.scss";
 import { Indicator as IndicatorInterface } from "../../../types/types";

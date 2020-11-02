@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./TopSkills.scss";
 import { Radar } from "react-chartjs-2";
 import { Indicator as IndicatorInterface} from "../../../types/types";
 
-interface Props {
+export interface Props {
   topSkills: IndicatorInterface[];
 }
 
