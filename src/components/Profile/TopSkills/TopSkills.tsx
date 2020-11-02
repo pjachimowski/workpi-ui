@@ -10,7 +10,6 @@ export interface Props {
 const TopSkills: React.FC<Props> = (props) => {
 
   const chartData = {
-    // change labels to props 
     labels: props.topSkills.map(x => x.indicatorName),
     datasets: [
       {
