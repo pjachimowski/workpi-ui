@@ -3,7 +3,7 @@
 *Patryk Jachimowski*
 
 ## 1. Technology used
-* Language: Typescript
+* Language: Typescript, React (Hooks)
 * Styling: Scss (with use of pre-existing styles from workpi.scss)
 * Graphs: charts.js
 * UI reusable Components: storybook.js
@@ -27,16 +27,18 @@ The section can be divided into 3 subsections:
 
 (each of those screenblocks in wrapped in **PaneWrapper** component which provides different styling for mobile and desktop view)
 
-Side Pane is fitted with button which hides the pane to the left. This toggle button changes in mobile version for better user experience.
+Side Pane is fitted with button which hides the pane to the left. This toggle button changes in mobile version for better user experience. Side Pane does not dissapear completly. 64pixels were left for navigation bar. 
 
 **PERSONAL INFO:**
-Personal Info Component is the second most complex component in the project. I accept 3 props from higher order component:
+Personal Info Component is the second most complex component in the project. It accepts 3 props from higher order component:
  - userProfile
    -- These are data received from API regarding Profile of the user (ie. name, current job, profile picture)
  - list 
    -- this is a complete list of personal information about the user
  - updatePersonalInfo
    -- only informations which user wants to display on the profile page. These are changing dynamically. 
+
+Here, by clicking on "Edit" button, user can add or deduct data to be displayed on the panel. This feature is just cosmetic. User can not add data from this component. 
 
 **TOP SKILLS**
 This component display chart which shows the three skills (indicators) with the highest assessment scores (IndicatorValue). Those are taken from the database and passed inside props at the higher level component. Icons are stored in mocked database and are styled accordingly. 
