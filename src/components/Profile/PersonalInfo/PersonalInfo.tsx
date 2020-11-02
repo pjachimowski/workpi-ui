@@ -50,10 +50,8 @@ const PersonalInfo: React.FC<Props> = ({
           </div>
         ))}
       </div>
-      <div className="edit-btn">
-
-      <EditBtn updatePersonalInfo={updatePersonalInfo} list={list} />
-
+      <div>
+        <EditBtn updatePersonalInfo={updatePersonalInfo} list={list} />
       </div>
     </div>
   );

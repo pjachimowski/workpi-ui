@@ -11,9 +11,9 @@ const DevelopmentSkills: React.FC<Props> = (props) => {
   return (
     <div className="development-skills">
       {/*Progress Bars modyfied in ../../Display/ProgressBar*/}
-      <div className="development-skills-title">Development Skills</div>
+      <h2>Development Skills</h2>
       {props.developmentSkills.map( x => (
-        <div>
+        <div className="development-skills-item">
           {x.indicatorName}
           <ProgressBar value={x.indicatorValue} />
         </div>

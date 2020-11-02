@@ -75,6 +75,9 @@ const SidePane: React.FC<Props> = () => {
       <Wrapper>
         <TopSkills topSkills={topSkills} />
       </Wrapper>
+      <Wrapper>
+        <DevelopmentSkills developmentSkills={developmentSkills} />
+      </Wrapper>
       <div className="slide-toggle-btn" onClick={show}>
         <FontAwesomeIcon
           className="grip-lines-vertical"
@@ -89,9 +92,6 @@ const SidePane: React.FC<Props> = () => {
           icon={["fas", "chevron-circle-left"]}
         ></FontAwesomeIcon>
       </div>
-      <Wrapper>
-        <DevelopmentSkills developmentSkills={developmentSkills} />
-      </Wrapper>
     </div>
   );
 };

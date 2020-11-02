@@ -28,7 +28,7 @@ export default {
       "indicatorName": "previous education",
       "indicatorInput": "Full Stack Software Developer",
       "icon": "graduation-cap",
-      "isActive": false
+      "isActive": true
     },
     {
       "indicatorID": "15",

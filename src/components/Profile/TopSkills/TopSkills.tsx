@@ -27,7 +27,7 @@ const TopSkills: React.FC<Props> = (props) => {
 
   return (
     <div>
-      <div className="top-skills-title">Top skills</div>
+      <h2>Top skills</h2>
       <div className="top-skills-chart">
         <Radar
           data={chartData}
