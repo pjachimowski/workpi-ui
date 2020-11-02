@@ -1,19 +1,18 @@
 import React from "react";
 import "./TopSkills.scss";
 import { Radar } from "react-chartjs-2";
-import { Indicator as IndicatorInterface} from "../../../types/types";
+import { Indicator as IndicatorInterface } from "../../../types/types";
 
 export interface Props {
   topSkills: IndicatorInterface[];
 }
 
-const TopSkills: React.FC<Props> = (props) => {
-
+const TopSkills: React.FC<Props> = ({ topSkills }: Props) => {
   const chartData = {
-    labels: props.topSkills.map(x => x.indicatorName),
+    labels: topSkills.map((x) => x.indicatorName),
     datasets: [
       {
-        data: props.topSkills.map(x => x.indicatorValue),
+        data: topSkills.map((x) => x.indicatorValue),
         backgroundColor: "rgba(253, 221, 77, 0.5)",
         borderColor: "rgba(253, 221, 77, 1)",
         borderWidth: 2,

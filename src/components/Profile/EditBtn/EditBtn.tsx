@@ -8,7 +8,7 @@ interface Props {
   updatePersonalInfo: (indicatorName: string | symbol) => void;
 }
 
-const EditBtn: React.FC<Props> = (props) => {
+const EditBtn: React.FC<Props> = ({ updatePersonalInfo, list }: Props) => {
   const [showList, setShowList] = useState<boolean>(false);
 
   const changeShowListState = () => {
@@ -20,10 +20,10 @@ const EditBtn: React.FC<Props> = (props) => {
       return (
         <div>
           <input
-          className="checkbox"
-          type="checkbox"
-          checked={x.isActive}
-          onChange={() => props.updatePersonalInfo(x.indicatorName)}
+            className="checkbox"
+            type="checkbox"
+            checked={x.isActive}
+            onChange={() => updatePersonalInfo(x.indicatorName)}
           />
           <label> {x.indicatorName} </label>
         </div>
@@ -38,9 +38,13 @@ const EditBtn: React.FC<Props> = (props) => {
           className="user-edit"
           id="icon"
           icon={["fas", "user-edit"]}
-        ></FontAwesomeIcon> Edit
+        ></FontAwesomeIcon>{" "}
+        Edit
       </a>
-      <div className="personal-info-list"> {showList ? getList(props.list) : ""} </div>
+      <div className="personal-info-list">
+        {" "}
+        {showList ? getList(list) : ""}{" "}
+      </div>
     </div>
   );
 };

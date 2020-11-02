@@ -7,12 +7,12 @@ export interface Props {
   developmentSkills: IndicatorInterface[];
 }
 
-const DevelopmentSkills: React.FC<Props> = (props) => {
+const DevelopmentSkills: React.FC<Props> = ({ developmentSkills }: Props) => {
   return (
     <div className="development-skills">
       {/*Progress Bars modyfied in ../../Display/ProgressBar*/}
       <h2>Development Skills</h2>
-      {props.developmentSkills.map( x => (
+      {developmentSkills.map((x) => (
         <div className="development-skills-item">
           {x.indicatorName}
           <ProgressBar value={x.indicatorValue} />
