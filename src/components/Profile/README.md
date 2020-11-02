@@ -1,15 +1,15 @@
-#WorkPi Assessment Data Profile
+# WorkPi Assessment Data Profile
 
 *Patryk Jachimowski*
 
-##1. Technology used
+## 1. Technology used
 * Language: Typescript
 * Styling: Scss (with use of pre-existing styles from workpi.scss)
 * Graphs: charts.js
 * UI reusable Components: storybook.js
 
 
-##2. Component Structure
+## 2. Component Structure
 * Entire project was done and edited in Profile folder inside src/Components
 * Components built with single responsibility principle
 * Styling kept inside scss files (with global class definitions)
@@ -44,7 +44,7 @@ This component display chart which shows the three skills (indicators) with the 
 **DEVELOPMENT SKILLS**
 This component display chart which shows the three skills (indicators) with the lowest assessment scores (IndicatorValue). Those are taken from the database and passed inside props at the higher level component. 
 
-##MOBILE
+## 3. Mobile
 App is fully responsive and few elements change in different views. However, last thing I was working on was displaying data list and buttons inside PersonalInformation Component. And the outcome is not yet as I imagined it to be. 
 
 Mobile Preview is cleaner (no box shadowing), and fonts are few pixels bigger.
@@ -52,24 +52,24 @@ Mobile Preview is cleaner (no box shadowing), and fonts are few pixels bigger.
 Main component SidePane is fitted with the slide button which changes in mobile view. 
 
 
-##DATA
-My first step when planning my workflow, apart from checking all the folders and understanding how application works, was mocking data and assigning types. In the first stage I mocked date inside each component, later I extracted this data to single JSON file. At the end I created 3 .ts files each mimicking separate request to API. 
+## 4. Data
+My first step when planning my workflow, after checking all the folders and understanding how application works, was analysing data in glossary, mocking it and assigning types. In the first stage I mocked date inside each component, later I extracted this data to single JSON file. At the end I created 3 .ts files each mimicking separate request send to API. 
 
 Data files also import interfaces from type.ts file which I store in separated folder.
 
-##STORY BOOK
+## 5. Storybook
 This element was new to me and I had a great time learning and discovering its efficiency. I have created components basing my code on existing files.
 
-###miscellaneous
+### miscellaneous
 1) I have tried to connect to API with GraphQL. However, it was hard as the only data I could find was only user logging data. Later after communication with Daniel I decided to focus on building reusable components and frontend and left the backend untouched.
 2) There were some styling elements used by designers which were missing in documentation od Chart.js. Current state is the closest to the one from the assigment. 
 3) I did encountered several bugs along the way and therefor I worked on several branches. 
 4) There is a NewNav folder created when I was trying to implement a navbar on the side of the page. Due to lack of time I was unable to finish that extra part. 
 
-###IN THE FUTURE
+### IN THE FUTURE
 If time would allow I would deffinitely correct personal information list on mobile, add more interesting praphs and move navigation bar to the side (which should not be a big problem).
 
-Thank you vary much for this challenge. I really enjoyed every minute spent on it and I have learnt a lot along the way. I hope you are satysfied with the outcome. 
+> Thank you vary much for this challenge. I really enjoyed every minute spent on it and I have learnt a lot along the way. I hope you are satysfied with the outcome. 
 
 
 
