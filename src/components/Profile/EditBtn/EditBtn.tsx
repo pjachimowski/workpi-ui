@@ -19,13 +19,16 @@ const EditBtn: React.FC<Props> = ({ updatePersonalInfo, list }: Props) => {
     return list.map((x) => {
       return (
         <div>
-          <input
-            className="checkbox"
-            type="checkbox"
-            checked={x.isActive}
-            onChange={() => updatePersonalInfo(x.indicatorName)}
-          />
-          <label> {x.indicatorName} </label>
+          <label className="label">
+            {x.indicatorName}
+            <input
+              className="checkbox"
+              type="checkbox"
+              checked={x.isActive}
+              onChange={() => updatePersonalInfo(x.indicatorName)}
+            />
+            <span className="geekmark"></span> 
+          </label>
         </div>
       );
     });
