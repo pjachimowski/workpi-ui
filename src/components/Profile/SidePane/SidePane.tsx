@@ -4,7 +4,7 @@ import DevelopmentSkills from "../DevelopmentSkills/DevelopmentSkills";
 import PersonalInfo from "../PersonalInfo/PersonalInfo";
 import TopSkills from "../TopSkills/TopSkills";
 import Wrapper from "../Wrapper/Wrapper";
-import userMock from "../../../data_mocked/userApiMock";
+import userProfileMock from "../../../data_mocked/userProfileApiMock";
 import indicatorsApiMock from "../../../data_mocked/indicatorsApiMock";
 import personalInfoApiMock from "../../../data_mocked/personalInfoApiMock";
 import * as _ from "lodash";
@@ -58,7 +58,6 @@ const SidePane: React.FC<Props> = () => {
 
       if (personalInfoTABLICA[key].indicatorName === indicatorName) {
         personalInfoTABLICA[key].isActive = !personalInfoTABLICA[key].isActive;
-        console.log(">>>>", indicatorName);
         break;
       }
     }
@@ -71,7 +70,7 @@ const SidePane: React.FC<Props> = () => {
         <PersonalInfo
           updatePersonalInfo={updateActivePersonalInfo}
           list={personalInfo}
-          user={userMock}
+          userProfile={userProfileMock}
         />
       </Wrapper>
 

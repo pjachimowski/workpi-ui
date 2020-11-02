@@ -9,18 +9,18 @@ export interface Indicator {
 }
 
 export interface PersonalInfo {
-  indicatorID?: string | symbol;
+  indicatorID: string | symbol;
   indicatorName: string | symbol;
   indicatorInput: string;
   icon: IconName;
   isActive: boolean;
 }
 
-export interface User {
-  user_name: string;
-  current_job: string;
-  profile_picture: string;
-  isActive: boolean;
+export interface UserProfile {
+  userName: string;
+  currentJob: string;
+  profilePicture: string;
+  isLoggedIn: boolean;
 }
 
 export interface Nav {

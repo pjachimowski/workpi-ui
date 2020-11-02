@@ -11,7 +11,7 @@
   font-size: 18px;
   width: 15px;
   height: 25px;
-  background: $grad-grey-tb;
+  background: $grad-bg;
   border-radius: 3px;
   border: 1px solid $color-grey-2;
   display: block;
@@ -23,7 +23,7 @@
 }
 
 .profile-side-pane {
-  background-color: $color-grey-1;
+  background: $grad-grey-tb;
   border: 1px solid $color-dark-fg;
   outline: 1px solid $color-grey-2;
   box-shadow: inset -7px 0 9px -7px rgba(0, 0, 0, 0.4);
@@ -34,8 +34,8 @@
   left: 0;
   width: 344px;
   transition: 0.4s;
-  /*padding-top 64(hight on the navbar) + 5 */
-  padding: 69px 15px 5px 15px;
+  /*padding-top 64(hight on the navbar) + 10 */
+  padding: 74px 15px 5px 15px;
   height: 100%;
 }
 
@@ -54,7 +54,9 @@
 @include small-screen {
   .profile-side-pane {
     position: absolute;
+    padding: 74px 0 0 0;
     width: 100%;
+    box-shadow: none;
     .chevron-circle-left {
       display: inline;
       :hover {
@@ -67,12 +69,13 @@
     }
   }
   #slide-pane.active {
-    left: -375px;
+    left: -600px;
     .user-circle {
       display: inline;
+      color: $color-primary-2;
       :hover {
         cursor: pointer;
-        color: $color-dark-grey-2;
+        color: $color-dark-primary-2;
       }
     }
     .chevron-circle-left {

@@ -24,6 +24,8 @@ The section can be divided into 3 subsections:
 
 Side Pane is fitted with button which hides the pane to the left. This toggle button changes in mobile version for better user experience.
 
+**PERSONAL INFO:**
+
 
 
 

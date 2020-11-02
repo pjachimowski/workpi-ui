@@ -2,19 +2,19 @@ import React, { useState, useEffect } from "react";
 import "./PersonalInfo.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  User as UserInterface,
+  UserProfile as UserProfileInterface,
   PersonalInfo as PersonalInfoInterface,
 } from "../../../types/types";
 import AddField from "../AddField/AddField";
 import * as _ from "lodash";
 
 interface Props {
-  user: UserInterface;
+  userProfile: UserProfileInterface;
   list: PersonalInfoInterface[];
   updatePersonalInfo: (indicatorName: string | symbol) => void;
 }
 
-const PersonalInfo: React.FC<Props> = ({ user, list, updatePersonalInfo }: Props) => {
+const PersonalInfo: React.FC<Props> = ({ userProfile, list, updatePersonalInfo }: Props) => {
   const getActivePersonalInfo = (list: PersonalInfoInterface[]) =>
     _.chain(list)
       .filter((x) => x.isActive === true)
@@ -22,13 +22,13 @@ const PersonalInfo: React.FC<Props> = ({ user, list, updatePersonalInfo }: Props
 
   return (
     <div className="personal-info">
-      <img src={user.profile_picture} alt="profile picture"></img>
-      <div className="user-name">{user.user_name}</div>
+      <img src={userProfile.profilePicture} alt="profile"></img>
+      <div className="user-name">{userProfile.userName}</div>
       <div className="current-job"><FontAwesomeIcon
             id="icon"
             className="briefcase"
             icon={["fas", "briefcase"]}
-          ></FontAwesomeIcon> {user.current_job}</div>
+          ></FontAwesomeIcon> {userProfile.currentJob}</div>
       {getActivePersonalInfo(list).map((x) => (
         <div>
           <FontAwesomeIcon
