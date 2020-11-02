@@ -29,8 +29,8 @@ const TopSkills: React.FC<Props> = ({ topSkills }: Props) => {
       <div className="top-skills-chart">
         <Radar
           data={chartData}
-          width={100}
-          height={100}
+          width={120}
+          height={120}
           options={{
             scale: {
               gridLines: {

@@ -16,27 +16,31 @@ const EditBtn: React.FC<Props> = ({ updatePersonalInfo, list }: Props) => {
   };
 
   const getList = (list: PersonalInfoInterface[]) => {
-    return list.map((x) => {
-      return (
-        <div>
-          <label className="label">
-            {x.indicatorName}
-            <input
-              className="checkbox"
-              type="checkbox"
-              checked={x.isActive}
-              onChange={() => updatePersonalInfo(x.indicatorName)}
-            />
-            <span className="geekmark"></span> 
-          </label>
-        </div>
-      );
-    });
+    return (
+      <div className="personal-info-list">
+        {list.map((x) => {
+          return (
+            <div>
+              <label className="label">
+                {x.indicatorName}
+                <input
+                  className="checkbox"
+                  type="checkbox"
+                  checked={x.isActive}
+                  onChange={() => updatePersonalInfo(x.indicatorName)}
+                />
+                <span className="custom-check-box"></span>
+              </label>
+            </div>
+          );
+        })}
+      </div>
+    );
   };
 
   return (
     <div>
-      <a onClick={changeShowListState}>
+      <a className="edit-btn-text-desktop" onClick={changeShowListState}>
         <FontAwesomeIcon
           className="user-edit"
           id="icon"
@@ -44,7 +48,14 @@ const EditBtn: React.FC<Props> = ({ updatePersonalInfo, list }: Props) => {
         ></FontAwesomeIcon>{" "}
         Edit
       </a>
-      <div className="personal-info-list">
+      <a className="edit-btn-text-mobile" onClick={changeShowListState}>
+        <FontAwesomeIcon
+          className="user-edit"
+          id="icon"
+          icon={["fas", "user-edit"]}
+        ></FontAwesomeIcon>{" "}
+      </a>
+      <div>
         {" "}
         {showList ? getList(list) : ""}{" "}
       </div>

@@ -27,6 +27,9 @@ const PersonalInfo: React.FC<Props> = ({
   return (
     <div className="personal-info">
       <img src={userProfile.profilePicture} alt="profile"></img>
+      <div className="edit-btn-mobile">
+        <EditBtn updatePersonalInfo={updatePersonalInfo} list={list} />
+      </div>
       <div className="user-name">{userProfile.userName}</div>
       <div className="current-job">
         <FontAwesomeIcon
@@ -50,7 +53,7 @@ const PersonalInfo: React.FC<Props> = ({
           </div>
         ))}
       </div>
-      <div>
+      <div className="edit-btn-desktop">
         <EditBtn updatePersonalInfo={updatePersonalInfo} list={list} />
       </div>
     </div>

@@ -9,6 +9,9 @@
   padding: 5px;
   border-radius: 4px;
 }
+.edit-btn-text-mobile {
+  display: none;
+}
 
 .label {
   display: inline;
@@ -21,7 +24,7 @@ input[type="checkbox"] {
   visibility: hidden;
 }
 
-.geekmark {
+.custom-check-box {
   position: absolute;
   top: -3px;
   left: -12px;
@@ -32,14 +35,72 @@ input[type="checkbox"] {
   border: solid 1px $color-primary-2;
 }
 
-.label:hover input ~ .geekmark {
-  background: $grad-bg;
+.label:hover input ~ .custom-check-box {
   box-shadow: $glow-primary-2;
 }
 
-.label input:active ~ .geekmark {
+.label input:active ~ .custom-check-box {
   background-color: $color-primary-2;
 }
-.label input:checked ~ .geekmark { 
-  background-color: $color-primary-1; 
-} 
+.label input:checked ~ .custom-check-box {
+  background-color: $color-primary-1;
+}
+
+@include small-screen {
+  .edit-btn-text-mobile {
+    position: relative;
+    top: -95px;
+    right: -30px;
+    font-size: 12px;
+    padding: 13px 8px;
+    display: inline;
+    border-radius: 50%;
+    background-color: $color-primary-1;
+    #icon {
+      color: white;
+    }
+    :hover {
+      box-shadow: $glow-primary-2;
+    }
+  }
+  .edit-btn-text-desktop {
+    display: none;
+    visibility: hidden;
+  }
+  .personal-info-list {
+    position: absolute;
+    /*top 64(hight on the navbar) + 5 */
+    top: 69px;
+    right: 5px;
+    margin-right: 5px;
+    width: 50%;
+    height: 200px;
+    margin: 5px;
+    background-color: $color-primary-2;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    box-shadow: $glow-shadow;
+  }
+  .custom-check-box {
+    position: absolute;
+    top: 1px;
+    left: -14px;
+    height: 10px;
+    width: 10px;
+    background-color: $color-dark-fg;
+    border-radius: 4px;
+    border: solid 1px $color-grey-1;
+  }
+
+  .label:hover input ~ .custom-check-box {
+    box-shadow: $glow-shadow;
+  }
+
+  .label input:active ~ .custom-check-box {
+    background-color: $color-primary-2;
+  }
+  .label input:checked ~ .custom-check-box {
+    background-color: $color-dark-grey-2;
+  }
+}

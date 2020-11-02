@@ -1,5 +1,12 @@
 @import "~theme/workpi.scss";
 
+.edit-btn-desktop {
+  display: block;
+}
+.edit-btn-mobile {
+  display: none;
+}
+
 .personal-info {
   display: flex;
   flex-direction: column;
@@ -68,5 +75,46 @@
   .personal-info-active {
     max-width: 200px;
     line-height: 1.4;
+  }
+}
+
+@include small-screen {
+  .edit-btn-desktop {
+    display: none;
+    :hover {
+      background-color: none;
+      box-shadow: none;
+    }
+  }
+  .edit-btn-mobile {
+    display: inline;
+  }
+  .personal-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: left;
+    height: auto;
+    text-align: left;
+    .current-job {
+      font-size: 8px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .personal-info-items {
+      display: block;
+      font-size: 12px;
+      line-height: 2;
+    }
+  }
+  .personal-info-active {
+    display: block;
+    line-height: 1.4;
+  }
+  .personal-info img {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    margin: 4px;
   }
 }
