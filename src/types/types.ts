@@ -1,16 +1,16 @@
 import { IconName } from "@fortawesome/fontawesome-svg-core";
 
 export interface Indicator {
-  indicatorID?: string | symbol;
-  indicatorName: string | symbol;
+  indicatorID?: string;
+  indicatorName: string;
   indicatorValue: number;
-  indicatorCategory: string | symbol;
-  IndicatorType?: string | symbol;
+  indicatorCategory: string;
+  IndicatorType?: string;
 }
 
 export interface PersonalInfo {
-  indicatorID: string | symbol;
-  indicatorName: string | symbol;
+  indicatorID: string;
+  indicatorName: string;
   indicatorInput: string;
   icon: IconName;
   isActive: boolean;
